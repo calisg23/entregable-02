@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap');
+
+h4 {
+    font-family: 'Delicious Handrawn', cursive;
+}
+
+.navbar-brand img{
+    height: 44px;
+}
+
+@media screen and (max-width: 600px) {
+    .formulario{
+        width: 80%!important;
+    }
+}
+
+
+.container-galeria{
+    display: grid;
+    grid-template-rows: repeat(4,370px);
+    grid-template-columns: repeat(2,650px);
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+
+
+.container {
+    background-color: beige;
+    justify-content: center;
+}
+
+
+.bordes{
+    border: 1px solid black;
+}
+
+
+.container-2{
+    display: grid;
+    /* VH =  Todo el alto del viewport y VM me va tomar el ancho */
+    height: 100vh;
+    grid-template-rows: 100px 1fr 1fr 70px;
+    grid-template-columns: 15% 1fr 20%;
+
+    /* Grid template areas =  vamos a ordenar nuestro sitio por area */
+    grid-template-areas: 
+    "nav header header"
+    "nav productos aside"
+    "nav servicios aside";
+
+}
+
+header{
+    grid-area: header;
+    background-color: cadetblue;
+}
+nav{
+    grid-area: nav;
+}
+.productos{
+    grid-area: productos;
+
+}
+.servicios{
+    grid-area: servicios;
+}
+aside{
+    grid-area: aside;
+}
+footer{
+    grid-area: footer;
+}
